@@ -17,10 +17,10 @@ Extraire, transformer et charger les données d'AdventureWorks (SQL Server) dans
 - `capture_powerbi/` : captures ou fichiers `.pbix` du dashboard
 
 ## Étapes réalisées
-- ✔ Connexion SQL Server via JDBC
-- ✔ Extraction des données avec Spark
-- ✔ Création des tables dimensionnelles et de la table de faits
-- ✔ Chargement dans PostgreSQL
+- Connexion SQL Server via JDBC
+-  Extraction des données avec Spark
+-  Création des tables dimensionnelles et de la table de faits
+-  Chargement dans PostgreSQL
 - 🚧 Power BI (à faire par le binôme)
 
 ## Instructions d'exécution
