@@ -1,0 +1,29 @@
+version: '3'
+services:
+  spark:
+    image: bitnami/spark:3.5
+    container_name: spark_scala_etl
+    user: root
+    environment:
+      - SPARK_MODE=master
+    ports:
+      - "4040:4040"
+    volumes:
+      - ./app:/app
+    stdin_open: true
+    tty: true
+
+  postgres:
+    image: postgres:15
+    container_name: pg_dwh
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: dwh
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
